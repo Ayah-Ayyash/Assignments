@@ -1,5 +1,6 @@
 /.vscode
-/Assembly-CSharp-Editor.csproj
+/*.meta
+Assembly-CSharp-Editor.csproj
 /Assembly-CSharp.csproj
 /Assignments.sln
 /Library
@@ -8,3 +9,4 @@
 /ProjectSettings
 /Temp
 /UserSettings
+*.meta
