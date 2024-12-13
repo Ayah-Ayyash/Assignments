@@ -15,13 +15,11 @@ namespace Assignment27
         }
 
 
-
         //2
         void Ref(ref int number)
         {
             number *= 2;
         }
-
 
 
         //3
@@ -31,7 +29,12 @@ namespace Assignment27
             product = a * b;
         }
 
-
+        //يشمل كل شيء
+        public void Playerstats(ref int health, out int damage)
+        {
+            health += 10;
+            damage = health * 2;
+        }
 
 
 
@@ -46,13 +49,18 @@ namespace Assignment27
             int val = 9;
             Ref(ref val);
             Debug.Log("Ref Value" + val);
-////kkkkkkkkk
 
             //3
             int sum;
             int product;
             OutValue(5, 4, out sum, out product);
             Debug.Log("Sum =" + sum + " Product =" + product);
+
+            //يشمل كل شيء
+            int health = 50;
+            int damage;
+            Playerstats(ref health, out damage);
+            Debug.Log("Health = " + health + " Damage = " + damage);
 
         }
 
