@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 //using System.DateTime;
 namespace Assignment29
@@ -17,12 +18,11 @@ namespace Assignment29
             var result = number % 2 == 0 ? "Even" : "Odd";
             Debug.Log($"Number: {number} is {result}");
 
-            Debug.Log("Time and date :");
+           // Debug.Log("Time and date :");
             DateTime now = new DateTime(2024, 12, 27, 13, 25, 0);
-            Debug.Log(now);
+            Debug.Log("Time and date :"+ now);
 
-            Debug.Log($" Today is:{DateTime.Now.DayOfWeek}");
-
+            Debug.Log($" Today is: {DateTime.Now.DayOfWeek}");
 
 
         }
@@ -34,3 +34,4 @@ namespace Assignment29
 
     }
 }
+

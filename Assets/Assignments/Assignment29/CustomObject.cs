@@ -7,8 +7,8 @@ namespace Assignment29
 
     public class CustomObject
     {
-        public int ID { get; private set; }
-        public string Name { get; private set; }
+        public int ID { get;  set; }
+        public string Name { get;  set; }
 
 
         public CustomObject(int id, string name)
