@@ -13,7 +13,7 @@ public class UnitySpecificScript : MonoBehaviour
         print("GameObject Enabled");
     }
 
- void OnDisable()
+    void OnDisable()
     {
         print("GameObject Disabled");
     }
@@ -53,8 +53,12 @@ public class UnitySpecificScript : MonoBehaviour
             print("No Light object found");
         }
 
-    
 
+
+
+
+
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.D))
@@ -70,7 +74,4 @@ public class UnitySpecificScript : MonoBehaviour
             }
         }
     }
-
-   
-}
 }
