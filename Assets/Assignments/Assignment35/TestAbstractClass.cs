@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestAbstractClass : MonoBehaviour
+namespace Assignment35
 {
-    // Start is called before the first frame update
-    void Start()
+    public class TestAbstractClass : MonoBehaviour
     {
-        
-    }
+        private DerivedClassExample derivedClassExample;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void Start()
+        {
+
+            derivedClassExample = gameObject.AddComponent<DerivedClassExample>();
+
+
+            derivedClassExample.PerformAction();
+
+
+            derivedClassExample.PrintInfo();
+        }
+
+        void Update()
+        {
+        }
     }
 }

@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DerivedClassExample : MonoBehaviour
+namespace Assignment35
 {
-    // Start is called before the first frame update
-    void Start()
+    public class DerivedClassExample : AbstractBaseClass
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void PerformAction()
+        {
+            Debug.Log("Performing action in DerivedClassExample.");
+        }
     }
 }

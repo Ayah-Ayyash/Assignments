@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BuiltInDelegatesExample : MonoBehaviour
+namespace Assignment35
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public class BuiltInDelegatesExample : MonoBehaviour
     {
-        
+        void Start()
+        {
+            Action logMessage = () => Debug.Log("Action delegate");
+            logMessage();
+
+            Func<int, int> square = x => x * x;
+            Debug.Log($"Square of 5: {square(5)}");
+
+            Predicate<int> isEven = y => y % 2 == 0;
+            Debug.Log($"Is 4 even? {isEven(4)}");
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

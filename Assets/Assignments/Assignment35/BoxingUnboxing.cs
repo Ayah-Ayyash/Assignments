@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BoxingUnboxing : MonoBehaviour
+namespace Assignment35
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BoxingUnboxing : MonoBehaviour
     {
-        
-    }
+        void Start()
+        {
+            int health = 100;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            object objBox = health; // Boxing
+            int objUnbox = (int)objBox; // Unboxing
+            Debug.Log($"Original value: {health}");
+            Debug.Log($"Boxed value as object: {objBox}");
+            Debug.Log($"Unboxed and modified value: {objUnbox}");
+        }
+
+
+
+        // int myInt = (int)myObject; //unboxing
+
+
+
+        void Update()
+        {
+
+        }
     }
 }
