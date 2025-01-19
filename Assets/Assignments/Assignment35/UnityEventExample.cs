@@ -1,38 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 
-namespace Assignment35
+public class UnityEventExample : MonoBehaviour
 {
-    public class KineticScultpure : MonoBehaviour
+    public UnityEvent onEventTriggered;
+
+    void Start()
     {
-        float angleRange = 45;
-        float rotationDuration = 2f;
-
-        void Start()
+        if (onEventTriggered == null)
         {
-            Transform parent = GameObject.Find("Boxes").transform;
-            float delayTime = 0;
-            foreach (Transform child in parent)
-            {
-                StartCoroutine(RotateSomething(child, delayTime));
-                delayTime += 0.03f;
-            }
+            onEventTriggered = new UnityEvent();
         }
 
-        IEnumerator RotateSomething(Transform something, float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            float startTime = Time.time;
-            float elapsedTime = 0;
+        onEventTriggered.AddListener(OnEventResponse);
+    }
 
-            while (elapsedTime < rotationDuration)
-            {
-                elapsedTime = Time.time - startTime;
-                float rotationAngle = Mathf.PingPong(elapsedTime * 45, angleRange) - (angleRange / 2);
-                something.rotation = Quaternion.Euler(0, rotationAngle, 0);
-                yield return null;
-            }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            onEventTriggered.Invoke();
         }
+    }
+
+    void OnEventResponse()
+    {
+        Debug.Log("The event has been triggered!");
     }
 }

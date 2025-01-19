@@ -9,11 +9,11 @@ namespace Assignment35
     {
         void Start()
         {
-            Action logMessage = () => Debug.Log("Action delegate");
+            Action logMessage = () => Debug.Log("Hello from Action delegate!");
             logMessage();
 
             Func<int, int> square = x => x * x;
-            Debug.Log($"Square of 5: {square(5)}");
+            Debug.Log($"Square:: {square(5)}");
 
             Predicate<int> isEven = y => y % 2 == 0;
             Debug.Log($"Is 4 even? {isEven(4)}");
