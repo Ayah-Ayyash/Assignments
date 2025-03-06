@@ -8,7 +8,7 @@ public class Randomsize : MonoBehaviour
     private List<int> list;
     private Random random;
 
-    public Random()
+    public Randomsize()
     {
         dictionary = new Dictionary<int, int>();
         list = new List<int>();

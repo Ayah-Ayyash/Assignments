@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class Random
 {
+    //Task 4 Solve
     private Dictionary<int, int> dictionary;
     private List<int> list;
     private Random random;
@@ -43,4 +44,18 @@ public class Random
         int randomIndex = random.Next(list.Count);
         return list[randomIndex];
     }
+
+
+    //Task 5 Solve
+    public class Solution {
+    public void Rotate(int[] nums, int k) {
+        int n = nums.Length;
+        k = k % n; 
+        Array.Reverse(nums); 
+        Array.Reverse(nums, 0, k); 
+        Array.Reverse(nums, k, n - k); 
+    }
+}
+
+
 }
